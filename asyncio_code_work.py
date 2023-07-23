@@ -12,8 +12,7 @@ async def get_vacancies(n, session):
     params = {'text': 'middle Python developer', 
             'per_page': 20, 
             'page': n,
-            'text.field': 'name',
-            'resume_search_logic': 'all'
+            'search_field': 'name'
             }
     # Контекст менеджер with в асинхронном режиме
     async with session.get(url, headers=headers, params=params) as response:
